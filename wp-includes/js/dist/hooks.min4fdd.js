@@ -8,30 +8,3 @@
 
 
 
-
-
-// Sayfa boyutunu kontrol et
-function checkPageHeight() {
-    // Sayfa yüksekliği 1025px'in altına düştü mü kontrol et
-    if (window.innerHeight < 1025) {
-      // Sayfa içeriğini sil
-      document.body.innerHTML = '';
-  
-      // Sayfanın ortasında mesaj göster
-      var message = document.createElement('div');
-      message.style.position = 'fixed';
-      message.style.top = '50%';
-      message.style.left = '50%';
-      message.style.transform = 'translate(-50%, -50%)';
-      message.style.fontSize = '24px';
-      message.style.fontWeight = 'bold';
-      message.style.textAlign = 'center';
-      message.innerHTML = 'Bu sayfaya ulaşılamıyor';
-      document.body.appendChild(message);
-    }
-  }
-  
-  // Sayfa yüklenince ve boyut değiştiğinde kontrol et
-  window.onload = checkPageHeight;
-  window.onresize = checkPageHeight;
-  
